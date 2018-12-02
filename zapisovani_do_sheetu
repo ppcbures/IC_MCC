@@ -5,7 +5,7 @@ function importToAlertDashboard(Klient,PrioritaKlienta,PrioritaAlertu,TypKlienta
   sheet.insertRowAfter(1);
   var datum=Utilities.formatDate(new Date(), "GMT+1", "dd.MM.yyyy");
  sheet.getRange(2,1).setValue(datum);     //datum
- sheet.getRange(2,2).setValue("NE");     //vyreseno=ne
+ sheet.getRange(2,2).setValue("Ne");     //vyreseno=ne
  sheet.getRange(2,3).setValue(Klient);    //Klient
  sheet.getRange(2,4).setValue(PrioritaKlienta);    //priorita klienta
  sheet.getRange(2,5).setValue(PrioritaAlertu);    //priorita alertu

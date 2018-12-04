@@ -1,0 +1,24 @@
+function klientInfo(klientID){
+ var spreadsheet = SpreadsheetApp.openByUrl("https://docs.google.com/spreadsheets/d/1JP4RWC6AksCP6P3uMxEpU4gAjNgK-5IzW7CzicEh9J4/"); 
+ var sheetSeznamKlientu = spreadsheet.getSheetByName("Seznam klientů"); 
+ var pocetKlientu=sheetSeznamKlientu.getLastRow();
+  
+  for(var i=2;i<=pocetKlientu;i++){
+  	 if (sheetSeznamKlientu.getRange(i,2).getValue()==klientID){
+     var klientPriorita=sheetSeznamKlientu.getRange(i,3).getValue();
+     var klientTyp=sheetSeznamKlientu.getRange(i,4).getValue();
+     var klientSpecialista=sheetSeznamKlientu.getRange(i,5).getValue();
+     var klientProjektak=sheetSeznamKlientu.getRange(i,6).getValue();
+      
+    var klientInfo=[klientPriorita,klientTyp,klientSpecialista,klientProjektak];
+       return klientInfo;
+  
+  	}	
+    
+  
+  
+  }
+  
+  
+  
+} 
